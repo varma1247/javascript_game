@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Student Name:   -->
+<html lang="en">
+  <head>
+    <title>A Pong Game in JavaScript</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="pong.js"></script>
+  </head>
+  <body onmousemove="movePaddle(event);" style="background-color:#45d445;">
+    <h1>Pong Game</h1>
+    <form>
+      <input type="button" id="start" value="Start" onclick="startGame();" style="cursor: pointer;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="button" value="Reset" onclick="resetGame();" style="cursor: pointer;"/><br/><br/>
+      <label>Slow<input type="radio" name="speed" value="0" checked="checked" onclick="setSpeed(0);"/></label>
+      <label>Medium<input type="radio" name="speed" value="1" onclick="setSpeed(1);"/></label>
+      <label>Fast<input type="radio" name="speed" value="2" onclick="setSpeed(2);"/></label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label>Strikes: <span id="strikes">0</span></label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <label>High Score: <span id="score">0</span></label>
+      <br/>
+      <br/>
+      <div id="court" style="border: solid black; border-right-style: dashed; background-color: azure; width: 800px; height: 500px; cursor: none" onclick="startGame();">
+	<img id="ball" src="http://lambda.uta.edu/cse4392/ball.gif" height="20px" style="margin: 0; padding: 0px; position: relative;" />
+	<img id="paddle" src="http://lambda.uta.edu/cse4392/paddle.gif" style="margin: 0; padding: 0; position: relative; left: 750px;" />
+      </div>
+    </form>
+    <br/>
+    Messages: <span id="messages" style="font-size:20px;color:#2f00ff;"></span>
+    <script type="text/javascript" src="pong.js">
+    </script>
+  </body>
+</html>
